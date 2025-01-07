@@ -1,126 +1,275 @@
-/* App.css */
+/* styles/Header.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #38b2ac;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
-.hero-content {
-  text-align: center;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  max-width: 24rem;
-  background-color: #ffffff;
-  margin: 0 auto;
+body {
+  background-color: #f4f4f9;
+  color: #333;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.grid {
-  display: grid;
-}
-
-.btn {
-  margin: 0.5rem;
-}
-
-.btn-primary {
-  background-color: #1a202c;
-  color: #fff;
-}
-
-.divider {
-  border-top: 1px solid #e2e8f0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.modal {
+/* Header Section */
+.header_section {
+  padding: 20px 0;
   position: fixed;
+  width: 100%;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  z-index: 9999;
-  overflow: auto;
+  z-index: 100;
+  text-align: center;
+  background-color: #f4f4f9;
 }
 
-.modal-open {
-  display: block;
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 20px;
 }
 
-.modal-box {
-  margin: 2.5em auto;
-  background: #fff;
-  border-radius: 0.5em;
-  width: 40em;
-  max-width: 90vw;
-  padding: 1em;
+.sticky_nav {
+  background-color: #003a8c;
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.font-bold {
+.cmpny_name {
+  font-size: 24px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.first_wrap {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.first_wrap > input,
+.first_wrap > select {
+  background-color: transparent;
+  color: #003a8c;
+  border: 2px solid #003a8c;
+  padding: 10px 20px;
+  border-radius: 4px;
   font-weight: bold;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
+.input_div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
-.m-2 {
-  margin: 0.5rem;
+.input_div label {
+  color: #ffffff;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
+.input_1 {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
-.grid {
-  display: grid;
+/* .input_div input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  width: 80%;
+} */
+
+.fetch_asset_btn,
+.connect_wallet_btn {
+  background-color: #0073e6;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-.btn {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #00aba2;
+.fetch_asset_btn:hover,
+.connect_wallet_btn:hover {
+  background-color: #003a8c;
+}
+
+.second_wrap {
+  display: flex;
+  align-items: center;
+}
+
+/* Asset Info Section */
+.asset_info {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.asset_info h1 {
+  font-size: 22px;
+  color: #333;
+  border-bottom: 2px solid #0052cc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.asset_info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.asset_info strong {
+  color: #0052cc;
+}
+
+.asset_info label {
+  font-size: 16px;
+  color: #555;
+  font-weight: bold;
+}
+
+.asset_info input[type="number"],
+.asset_info input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.asset_info input[type="number"]:focus,
+.asset_info input[type="text"]:focus {
+  border-color: #0052cc;
+  outline: none;
+}
+
+.asset_info button {
+  background-color: #0052cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.asset_info button:hover {
+  background-color: #003a8c;
+}
+
+/* Toast Notifications */
+.Toastify__toast-container {
+  font-size: 14px;
+  text-align: left;
+}
+
+.Toastify__toast--success {
+  background-color: #28a745;
   color: #fff;
 }
 
-.btn-warning {
-  background-color: #d69e2e;
+.Toastify__toast--error {
+  background-color: #dc3545;
+  color: #fff;
 }
 
-.border-1 {
-  border-width: 1px;
+/* Dropdown and Select Styles */
+select {
+  cursor: pointer;
+  transition: border-color 0.3s;
 }
 
-.border-teal-800 {
-  border-color: #2c7a7b;
+select:focus {
+  border-color: #003a8c;
+  outline: none;
 }
 
-.modal-action {
-  display: grid;
-  margin-top: 1rem;
+.asset_ifo_div {
+  margin-top: 10rem;
 }
 
-.divider {
-  border-top: 1px solid #e2e8f0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+/* Modal Styles */
+.connect_wallet_btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.connect_wallet_btn:hover {
+  background-color: #003a8c;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header_wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .first_wrap {
+    /* margin-top: 15px; */
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+  .asset_info {
+    width: 90%;
+    padding-top: 0rem !important;
+  }
+
+  .first_wrap > input,
+  .first_wrap > select {
+    width: 80%;
+  }
+
+  .cmpny_name {
+    font-size: 18px;
+  }
+
+  .header_section {
+    position: static;
+  }
+
+  .asset_ifo_div {
+    margin-top: 10px;
+  }
 }
